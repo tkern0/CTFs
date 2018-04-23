@@ -1,0 +1,25 @@
+Private-Key: (256 bit)
+modulus:
+    00:82:38:76:d0:8e:12:a2:c7:ae:ca:e1:73:40:eb:
+    22:e7:fa:62:87:54:82:fe:df:c3:4e:fc:c1:95:7f:
+    50:26:df
+publicExponent: 65537 (0x10001)
+privateExponent:
+    1e:49:99:c0:fa:3a:75:67:f2:4c:b7:d1:41:b9:2e:
+    fd:e2:6f:8f:49:ec:d1:8c:5d:c8:1d:28:6b:f4:e5:
+    70:c9
+prime1:
+    00:84:fd:55:be:ca:06:98:47:69:26:2a:3c:68:96:
+    55:3d
+prime2:
+    00:fa:ab:73:3a:0e:4b:93:cb:06:9f:4f:aa:b0:38:
+    c6:4b
+exponent1:
+    55:d4:8e:d7:80:d9:ba:c4:33:e7:ce:d0:88:0b:a6:
+    5d
+exponent2:
+    00:9b:8c:a0:e8:39:ce:b4:5b:9c:34:67:df:67:93:
+    13:99
+coefficient:
+    00:84:63:5d:18:88:b7:65:2a:99:f3:d2:c8:6e:79:
+    28:21

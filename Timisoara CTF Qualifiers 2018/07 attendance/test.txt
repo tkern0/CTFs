@@ -1,0 +1,23 @@
+AAAABBBBCCCCDDDDEEEEFFFFGGGGHHHHIIIIJJJJKKKKLLLLABCDNNNNOOOOPPPPQQQQRRRRSSSSTTTTUUUUVVVVWWWWXXXXYYYYZZZZ
+                                                ^^^^           |<---
+                                                0x08048660 - RET address
+                                            ^^^^
+                                            0xffffd688
+                                        ^^^^
+                                        
+                                    ^^^^
+                                    
+                                ^^^^
+                                
+
+?*5 hijkkl
+0xffffd600 0xffffd671 0x00000000 0x0804a000 0xffffd688 0x08048660 0xffffd610
+
+set *0xffffd610=0xffff000a
+set *0xffffd60c=0x08048660
+set *0xffffd608=0xffffd688
+set *0xffffd604=0x0804a001
+set *0xffffd600=0x01010101
+set *0xffffd5fc=0xffffd671
+set *0xffffd5f8=0x48484848
+end
