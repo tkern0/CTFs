@@ -17,7 +17,7 @@ Visiting this site looks a lot like the last two in this series. This time it's 
 /.git        -  403 Forbidden
 ```
 
-That's interesting. I went into one of my own repositories to check what some of the files in there were, and then tried `http://squirrels.woodlandhighschool.xyz/.git/HEAD`. What do you know, it worked, I got the file. At this point I remembered a video I'd seen on a challenge just like this where you had to download the .git folder, and with a bit of googleing I found [GitTools][GitTools]. So I just had to run `./gitdumper.sh http://squirrels.woodlandhighschool.xyz/.git/ /squirrel` and I quickly had the repository. But then what? The repository only had a single commit, nothing in old versions to exploit.
+That's interesting. I went into one of my own repositories to check what some of the files in there were, and then tried `http://squirrels.woodlandhighschool.xyz/.git/HEAD`. What do you know, it worked, I got the file. At this point I remembered a video I'd seen on a challenge just like this, where you had to download the .git folder, and with a bit of googleing I found [GitTools][GitTools]. So I just had to run `./gitdumper.sh http://squirrels.woodlandhighschool.xyz/.git/ /squirrel` and I quickly had the repository. But then what? The repository only had a single commit, nothing in old versions to exploit.
 
 ```
 t@t:~/squirrel$ git log
@@ -37,7 +37,7 @@ Well poking through the .git files a bit I found something interesting, in 'conf
     fetch = +refs/heads/*:refs/remotes/fork/*
 ```
 
-So I tried `git pull fork master`. And it starts up perfectly fine, downloads all the objects... and then has a merge conflict. Thing is we still get `index.html`, and if you look through that:
+So I tried `git pull fork master`. It starts up perfectly fine, downloads all the objects... and then has a merge conflict. Thing is we still get `index.html`, and if you look through that:
 
 ```
 =======
