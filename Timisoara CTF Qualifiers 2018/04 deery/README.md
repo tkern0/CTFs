@@ -21,7 +21,7 @@ function dontUDare(){
 }
 ```
 
-So I made a quick local copy and removed that so that I could explore further. As it turns out that was completely unnecessary, nothing on the page links anywhere or activates anything. It did let me do a whole document search though, and wouldn't you know what I found?
+So I made a quick local copy and removed that so that I could explore further. As it turns out that was completely unnecessary, nothing on the page links anywhere or activates anything. It did let me do a whole project search for "timctf" though, and wouldn't you know what I found?
 
 ![timctf{Woodland_highschool_rocks_in_2018}][00_Flag]
 

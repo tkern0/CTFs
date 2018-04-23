@@ -60,7 +60,7 @@ Progran recived signal SIGSEV, Segmentation fault.
 0x4d4d4d4d in ?? ()
 ```
 
-0x4d4d4d4d corresponds to 'MMMM'. So I went to try find exactly caused it, and what I could substitute in. But while trying this, I repeatedly came across a really annoying feature I decided I had to deal with. If you spend too long, the program just kicks you out. Back in Binary Ninja I found what was causing that:
+0x4d4d4d4d corresponds to 'MMMM'. So I went to try find exactly caused it, and what I could substitute in. But while trying this, I repeatedly came across a really annoying feature I decided I had to deal with first. If you spend too long, the program just kicks you out, even in gdb. Back in Binary Ninja I found what was causing that:
 
 ![Alarm call][01_Alarm]
 
@@ -89,7 +89,7 @@ Segmentation fault
 t@t:~$
 ```
 
-Well that's not good. What I thought happened here was that I'd overwritten some other crucial byte with the rest of my text, so I spent way too long mapping everything out, working what bytes I'd have to set everything to, and working out where nulls could be replaced with 0x01. In actuality what was happening was address space layout randomization, the function just wasn't in the same place. As it turns out both gdb and the remote sever had this disabled, so I was really right all along. The last problem was just inputting it, as netcat wasn't printing anything if I piped stuff in. Because of this I copied a quick bit of code from stackoverflow, adjusted it a bit, and then just did everything through python. And it worked. A bit of exploring the file system later and...
+Well that's not good. What I thought happened here was that I'd overwritten some other crucial byte with the rest of my text, remember in gdb I entered nothing, so I spent way too long mapping everything out, working what bytes I'd have to set everything to so that it was the same, and working out where nulls could be replaced with 0x01. In actuality what was happening was address space layout randomization, the function just wasn't in the same place on my system. As it turns out both gdb and the remote sever had this disabled, so I was really right all along. The last problem was just inputting it, as netcat wasn't printing anything if I piped stuff in. Because of this I copied a quick bit of code from stackoverflow, adjusted it a bit, and then just did everything through python. And it worked. A bit of exploring the file system later and...
 
 ```
 t@t:~$ python attendance.py cat /home/attendance/flag

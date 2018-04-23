@@ -1,6 +1,6 @@
 ### Feedback
 10 points
-> Please help us become better by completing a short form([Google forms link]) and leave feedback on CTFTime(https://ctftime.org/event/594).
+> Please help us become better by completing a short form(_form link_) and leave feedback on CTFTime(https://ctftime.org/event/594).
 
 > Thank you!
 
